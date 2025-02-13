@@ -7,11 +7,31 @@
     <link rel="stylesheet" href="./yes_style.css">
 </head>
 <body>
+
     <div class="container">
         <h1 class="header_text">I believe in your choice cause I believe in you !! I Love You <3 </h1>
         <div class="gif_container">
             <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmo3c3l5ODh3ZGN6NHhhaDE2Mjg1ZjkwOXczdDFxbWM3dTBtaW9zaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/9XY4f3FgFTT4QlaYqa/giphy.gif">
         </div>
     </div>
+
+    <!-- Audio Player -->
+    <audio id="background-music" autoplay loop>
+        <source src="dunglamtraitimanhdau.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio = document.getElementById('background-music');
+            audio.volume = 0.5; // Đặt âm lượng ban đầu (0.0 - 1.0)
+            
+            // Tự động phát nhạc sau khi tương tác
+            document.body.addEventListener('click', function() {
+                audio.play();
+            });
+        });
+    </script>
+
 </body>
 </html>
